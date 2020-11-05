@@ -1,0 +1,8 @@
+<div class="col-12 pb-4 pt-4 pl-4 pr-4" style="background-color: rgb(250,250,245);">
+    <form class="form-group">
+        <input type="text" #nomefilm class="form-control" name="name" [(ngModel)]="titolo" placeholder="Cerca film...">
+        <button mat-raised-button class="form-control" (click)="cercaFilm(titolo, select)">CERCA</button>
+    </form>
+
+    <h2>{{nomeFilm}}</h2>
+</div>

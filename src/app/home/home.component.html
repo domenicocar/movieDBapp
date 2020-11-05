@@ -1,0 +1,21 @@
+<app-search-movie></app-search-movie>
+    <div class="container">
+        <h2>Trends</h2>
+        <div class="row">        
+            <div class="col-md-6 mt-4"  *ngFor="let movie of trend.results | orderBy: moviesOrder : true" >
+                <mat-card class="example-card">
+                    <mat-card-header (click)="onSelect(movie)">
+                        <mat-card-title>{{ movie.title }}</mat-card-title>
+                        <mat-card-subtitle> {{movie.release_date}} </mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="{{ 'http://image.tmdb.org/t/p/w500//' + movie.poster_path }}"
+                        alt="Photo of a Shiba Inu" (click)="onSelect(movie)">
+                    <mat-card-actions>
+                        <button mat-button>LIKE</button>
+                        <button mat-button>SHARE</button>
+                    </mat-card-actions>
+                </mat-card>
+        
+            </div>       
+        </div>
+     </div>
